@@ -1,78 +1,89 @@
 <template>
-    <h1>Index:{{ store.count }}</h1>
-    <h2>{{ $hello('DavidJan') }}</h2>
-
-    <h2 v-timeformat="1686117019052"></h2>
-    <Home />
-    <Box />
-    <BoxBtn />
-    <div class="mb-4">
-        <button @click="store.add">Click</button>
+    <h1>
+        <p>Grids Practice</p>
+    </h1>
+    <div class="box">
+        <div class="item1">NAV</div>
+        <div class="item2">LOGO</div>
+        <div class="item3">Cotent</div>
     </div>
-    <div class="mb-4">
-        <VDatePicker v-model="selectedDate" />
-    </div>
-    <div class="mb-4">
-        <NuxtLink to="/user">To User Page</NuxtLink>
-    </div>
-    <div class="mb-4">
-        <button @click="post_hello_api">post hello api</button>
-    </div>
-    <div class="mb-4">
-        <p>{{ mydata }}</p>
-    </div>
-    <div class="mb-4">
-        <p>Refresh /api/hello2</p>
-        <button @click="refreshApi">Refresh 「/api/hello2」 Api</button>
+    <div class="container">
+        <div class="grid">
+            <div class="g-col-6">.g-col-6</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+        </div>
     </div>
 </template>
 <script setup>
-    console.log('index page=>')
-    const store_test = useLogingStore()
-    console.log(store_test)
-    let store = useHomeStore()
-    const { $hello } = useNuxtApp() // use pligin function
-    let selectedDate = ref(new Date())
 
-    let post_hello_api = async function (params) {
-        const { data, pending, error, refresh } = await useFetch('/api/hello', {})
-        console.log(data.value.data)
-    }
-
-    let mydata = ref('')
-    const { data } = await useFetch('https://api.nuxtjs.dev/mountains') // useFetch會有ssr的功能(只限於剛載入時)
-    mydata.value = data.value
-
-    let post_fuck = await useFetch('/api/hello2', {
-        method: 'POST',
-        onRequest({ request, options }) {
-            // 設定請求時夾帶的標頭(回call時才可使用，第一次call不會進入)
-            options.headers = options.headers || {}
-            options.headers.authorization = '....'
-            console.log('/api/hello2 onRequest')
-        },
-        onRequestError({ request, options, error }) {},
-        onResponse({ request, response, options }) {
-            return response._data
-        },
-        onResponseError({ request, response, options }) {}
-    })
-    console.log(post_fuck.data.value)
-
-    let refreshApi = function (params) {
-        post_fuck.refresh()
-    }
-
-    let config = useRuntimeConfig()
-    if (process.server) {
-        console.log('config.token=>', config.token)
-        console.log('config =>', config)
-    }
-    if (process.client) {
-        console.log(config)
-    }
-
-    // 在 nuxt.congfig.js 內利用 vite 方式把環境變數 .env 讀進 process.env 內，並於 vue 引用
-    console.log(process.env)
-    console.log('WEB_URL=>', process.env.WEB_URL)
 </script>
+<style lang='scss'>
+.grid {
+    div {
+        background-color: #afa;
+    }
+}
+
+.box {
+    height: 500px;
+    width: 500px;
+    // border: #696969 1px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    // grid-template-columns: repeat(5, 100px);
+    // grid-template-rows: 100px 200px;
+    // grid-auto-rows: 150px;
+    // grid-auto-flow: column;
+    // grid-template-columns: 100px 200px;
+    // grid-template-rows: 1fr 100px;
+    // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    // grid-auto-columns: 100px;
+    // grid-auto-flow: column; // 多出來的子元素排列方式，預設是row
+    // grid-auto-columns: 1fr;
+    // grid-auto-rows: 100px;
+    // grid-template-columns: repeat(5, 1fr);
+    // grid-template-rows: repeat(5, 1fr);
+    // grid-template-rows: 100px 100px;
+    // grid-auto-flow: column;
+    // grid-template-areas:
+    //     "A B B"
+    //     "A C C";
+    grid-gap: 10px 0;
+    // grid-row-gap: 100px;
+
+}
+
+.item1 {
+    // grid-area: A;
+    // grid-column: 1/span 2;
+    // grid-column: 1 / 2;
+    // grid-row: 1/ -2;
+    // grid-column: 1;
+    // width: 100px;
+    grid-column: span 4;
+    background: #afa;
+}
+
+.item2 {
+    // grid-area: B;
+    // grid-row: 1 / 2;
+    // grid-column: 2 / 5;
+    // grid-row: 2;
+    // grid-column: 2/5;
+    // grid-row: 2;
+    // grid-column: 3;
+    // width: 100px;
+    // grid-column: span 4;
+    grid-column: span 2;
+    background: #aaf;
+}
+
+.item3 {
+    // grid-area: C;
+    grid-column: span 3;
+    background-color: cadetblue;
+}
+</style>
