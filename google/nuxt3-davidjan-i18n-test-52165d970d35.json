@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nuxt3-davidjan-i18n-test",
+  "private_key_id": "52165d970d350c55c57c0c0950c31e8df720f41b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCU5eRByjlQPS+2\n/5IV13YIMW+0X5MpCPK4cNH3f50ikLmFnP5HZqm89VV/iKYryhOOlcP3lUrMUPqX\ndilDcmppCZcG6xwoyjZLUWAy/oUykoLL9lmPhLrzTnfIRm0l4UUaMLXaZ5Xv7Zfn\nwqSyKh1d3S1jedbpUPBWHEutDmDJTMwo6+JqcsbzDo65nABvqO/CI0zlWFs01rEy\n1QOehekmW/nDMQ7Ym9Qgd9wXzCWkheXh6OAgbFez1iT6KYlhmFFUIb1uLmBS2WXe\nmiYpzZ9pPr/7B7kjZvoEqxWcEpLkANRIZaO7fG5WmDDC/Uqeo3rU1rIviDJXWEDd\ncuICTj5RAgMBAAECggEAIQIfymfqsbuGtuJMP9ROgb133nwrkva9XB8CpQPg0VdV\nEWY+xpRfP5kBla6069M156+SzHGHreirzOTwe9fC+DschHede/tr8uF82oErBQ2O\nummH7DWH/kUgb8ERFEsutwIiZmL9Tb2Vpda0DR0h+nt8QuexOXLsfKJ0Mk6ULTum\n/u/eFFP+MZuksAnoqpHPSbbx1R+2cxlP5/K0NivqEF3hZflhepAQmWUkUCFZszs8\nmL9iFFpMV6UgvYbu3cez3d2VlMTashIPVj3PPipeMTjwdVlqkkoxsW93Y2u+4NBk\n+PMxz5bynYXCARRQRFuCrCnREd0OkrpbJ5yb8PqWmwKBgQDNl+sQOiWKN1jY19LM\nOUEXU7rZPoiCk+V3QT/Apt0UvSugZ9/wYDmCxDZprp5VEIclVIVkzFCR0tMkHtDR\nFRZtJw+vK13dgihNS4Deb7xFYZG5pjiq7A/E5FE4zssx53FvPRcE4H293MYBfNxG\nM6Q+nEFM0qNYEHwdn8X/cfk64wKBgQC5Z3uZxehZt52rvPdUtsfPNN0yIOCcYOnX\n3zq08rS17CMKdpst0ZiYU+q5SOCszpWjzf6iNoIVS7Rh7PbLr767gbPtf4k4CzSA\ntypYkE4eXYDSB0fYgVDYyJ2U0u7CiGaW3DRX/UwpyzZo6eE+D39aiLsVCVXK6BtR\nc4uklz9kOwKBgF+mIAxKoRBus30e28l7kZbis3lCqIvndshGqPxeJVjysYtNCFhy\nzA7UbmQ4gx0cNWPesLi2fX16UhTp6Uh8wRRDKf7a9C6L0Wg0il3yKes1e3CdrpuG\ne8ekWU1OmCY9gP65sy3nq1hbkBs9FdXrTKx8Ub0F+kyMTtIRdTJkugj1AoGBAI2Q\nLhfjvN2EDaeryU2tojLcMmisIdRFS0fA8ppnFwQxITBED4iUmOb2bCq9Mo+/zRId\nn2dMJ1cLTtfWjzpHHmMdTbzxvFxGcfg14udsh7k3u7yiQoFVe92KkIep5xQyAeL+\nkBj/FsByoUDKE2nHe34tGGufjRo4z2MJzn4F3ikxAoGAQGDcIPDKXPHZSTrL/xpb\nKC9HmNkTJTYExQsUAMMQKjQMsNb8vVCVzjnMJDE9rFiqky/uWMKfp+BWsx3BK9AF\nv8HbxbXrEcCzXfqSHofQQhwGNKVicUwv0S74derc3FoGXMNVEKcL04X+BGLJIEwu\nMz/wXybiuE7XSNTGaJHp2KA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "david-nuxt3@nuxt3-davidjan-i18n-test.iam.gserviceaccount.com",
+  "client_id": "107295567249330085600",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/david-nuxt3%40nuxt3-davidjan-i18n-test.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
